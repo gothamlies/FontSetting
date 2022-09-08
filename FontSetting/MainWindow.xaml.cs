@@ -81,10 +81,13 @@ namespace FontSetting
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+            if (textBlock == null) return;
             Slider slider = sender as Slider;
-            if (slider == null) return;
+            if (slider != null) 
+            {
+                textBlock.FontSize = slider.Value;
+            } 
 
-            FontSize = slider.Value;
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)

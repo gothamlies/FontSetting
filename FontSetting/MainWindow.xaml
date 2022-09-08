@@ -50,6 +50,7 @@
             <RadioButton  Checked="RadioButton_Checked" DataContext="3" Content="По ширине" GroupName="TextAlign"></RadioButton>
         </StackPanel>
 
-        <TextBlock Grid.Column="1" Margin="10" TextWrapping="Wrap" Name="textBlock">wrhreh</TextBlock>
+        <TextBlock Grid.Column="1" Margin="10" TextWrapping="Wrap" Name="textBlock">Окно показывало смазанные ели, белый шум ноябрьской пурги; телеграфные столбы мельтешили, как поползшие рамки кадра в черно-белом кино. Показывали в окне Россию, которая от самого Соликамска вот вся такая была: елки, снег, столбы, потом прогалина с пришибленными избами, потом вокзал с силикатными авитаминозными двухэтажками, и опять — елок миллион густо и непроходимо натыкано вдоль путей — как колючкой обвито, не продерешься.
+        </TextBlock>
     </Grid>
 </Window>
