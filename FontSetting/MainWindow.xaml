@@ -1,0 +1,55 @@
+﻿<Window x:Class="FontSetting.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FontSetting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10">
+            <Label FontFamily="40">Шрифт</Label>
+            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="Arial"></ComboBoxItem>
+                <ComboBoxItem Content="Times New Roman"></ComboBoxItem>
+                <ComboBoxItem Content="Calibri"></ComboBoxItem>
+            </ComboBox>
+            
+            <StackPanel Margin="0,10,0,10">
+                <Label>Вес</Label>
+                <CheckBox Click="CheckBox_Checked" IsChecked="False">Жирный</CheckBox>
+            </StackPanel>
+            
+            <StackPanel Margin="0,10,0,10">
+                <Label>Начертание</Label>
+                <RadioButton Checked="RadioButton_CheckedChanged" Name="Style" IsChecked="True" GroupName="FontStyle">Обычный</RadioButton>
+                <RadioButton Checked="RadioButton_CheckedChanged" GroupName="FontStyle">Наклон</RadioButton>
+            </StackPanel>
+            
+            <Label>Цвет</Label>
+            <ComboBox SelectionChanged="ComboBox_SelectionChangedColor">
+                <ComboBoxItem Content="Красный"></ComboBoxItem>
+                <ComboBoxItem Content="Синий"></ComboBoxItem>
+                <ComboBoxItem Content="Зелёный"></ComboBoxItem>
+                <ComboBoxItem Content="Коричневый"></ComboBoxItem>
+                 <ComboBoxItem Content="Чёрный"></ComboBoxItem>
+            </ComboBox>
+
+            <Label>Размер</Label>
+            <Slider ValueChanged="Slider_ValueChanged" Margin="0,10,0,10" Minimum="12" Maximum="40"></Slider>
+
+            <Label>Выравнивание</Label>
+            <RadioButton Checked="RadioButton_Checked" DataContext="0" Content="По левому" GroupName="TextAlign"></RadioButton>
+            <RadioButton  Checked="RadioButton_Checked" DataContext="2" Content="По центру" GroupName="TextAlign"></RadioButton>
+            <RadioButton Checked="RadioButton_Checked" DataContext="1" Content="По правому" GroupName="TextAlign"></RadioButton>
+            <RadioButton  Checked="RadioButton_Checked" DataContext="3" Content="По ширине" GroupName="TextAlign"></RadioButton>
+        </StackPanel>
+
+        <TextBlock Grid.Column="1" Margin="10" TextWrapping="Wrap" Name="textBlock">wrhreh</TextBlock>
+    </Grid>
+</Window>
